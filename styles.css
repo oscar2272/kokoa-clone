@@ -1,0 +1,349 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+/* Variables */
+:root {
+  --main-color: #7f3dff;
+  --secondary-color: #eee5ff;
+  --accent-color: #fb6d3a;
+  --dark-color: #2c3639;
+  --light-color: #f8f6ff;
+  --horizontal-space: 25px;
+  --main-border: 1px solid rgba(0, 0, 0, 0.1);
+  --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  height: 100vh;
+  color: var(--dark-color);
+  background-color: var(--light-color);
+}
+
+/* Status Bar */
+.status-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 3px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--main-color);
+  color: white;
+  z-index: 2;
+}
+
+.status-bar__column {
+  width: 33%;
+}
+
+.status-bar__column:first-child {
+  display: flex;
+  align-items: center;
+}
+
+.status-bar__column:first-child span {
+  margin-right: 5px;
+}
+
+.status-bar__column:nth-child(2) {
+  display: flex;
+  justify-content: center;
+}
+
+.status-bar__column:last-child {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.status-bar__column:last-child i {
+  margin-left: 5px;
+}
+
+/* Welcome Header */
+.welcome-header {
+  margin: 90px 0px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcome-header__title {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: var(--main-color);
+}
+
+/* Login Form */
+#login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 30px;
+}
+
+#login-form input {
+  border: none;
+  padding: 15px;
+  font-size: 18px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: var(--box-shadow);
+  transition: all 0.3s ease-in-out;
+}
+
+#login-form input:focus {
+  outline: none;
+  transform: scale(1.02);
+  box-shadow: 0 5px 15px rgba(127, 61, 255, 0.2);
+}
+
+#login-form input[type="submit"] {
+  background-color: var(--main-color);
+  color: white;
+  padding: 20px 0px;
+  border-radius: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#login-form input[type="submit"]:hover {
+  background-color: #6930d9;
+  transform: translateY(-2px);
+}
+
+/* Navigation Bar */
+.nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  padding: 20px 50px;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.nav__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav__link {
+  color: var(--dark-color);
+  position: relative;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav__link:hover {
+  color: var(--main-color);
+}
+
+.nav__link i {
+  font-size: 20px;
+}
+
+.nav__notification {
+  background-color: var(--accent-color);
+  width: 25px;
+  height: 25px;
+  border-radius: 12.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  font-size: 12px;
+}
+
+.nav__dot {
+  background-color: tomato;
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  display: block;
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+}
+
+/* Screen Header */
+.screen-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--horizontal-space);
+  margin: 50px 0px 15px 0px;
+  background-color: white;
+  border-radius: 20px;
+  margin: 60px 20px 15px 20px;
+  box-shadow: var(--box-shadow);
+}
+
+.screen-header__title {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--main-color);
+}
+
+.screen-header__icons span {
+  margin-left: 25px;
+}
+
+/* User Component */
+.user-component {
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  box-shadow: var(--box-shadow);
+  transition: transform 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-component:hover {
+  transform: translateY(-2px);
+}
+
+.user-component__column:first-child {
+  display: flex;
+  align-items: center;
+}
+
+.user-component__column:last-child {
+  color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.user-component__column:last-child div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.user-component__avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 35px;
+  margin-right: 20px;
+  border: 3px solid var(--secondary-color);
+}
+
+.user-component__title {
+  font-weight: 600;
+  font-size: 22px;
+  color: var(--dark-color);
+}
+
+.user-component__subtitle {
+  margin-top: 8px;
+  font-size: 17px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.user-component__avatar--xl {
+  width: 80px;
+  height: 80px;
+}
+
+.user-component__avatar--sm {
+  width: 60px;
+  height: 60px;
+  border-radius: 25px;
+}
+
+.user-component__title--not-bold {
+  font-weight: 400;
+}
+
+.user-component__time {
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Badge */
+.badge {
+  background-color: var(--accent-color);
+  width: 25px;
+  height: 25px;
+  border-radius: 12.5px;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+}
+
+/* Main Screen */
+.main-screen {
+  padding: 0px var(--horizontal-space);
+  background-color: var(--light-color);
+}
+
+/* Friends Screen */
+.friends-screen {
+  padding: 0px var(--horizontal-space);
+  background-color: var(--light-color);
+}
+
+.friends-screen__channel {
+  margin-top: 25px;
+  border-top: var(--main-border);
+  padding-top: 15px;
+}
+
+.friends-screen__channel-header {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  color: var(--main-color);
+  font-weight: 600;
+}
+
+/* Find Icons */
+.find-icons {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 25px;
+}
+
+.find-icons__icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.find-icons__icon i {
+  font-size: 35px;
+}
+
+.find-icons__icon span {
+  margin-top: 18px;
+}
